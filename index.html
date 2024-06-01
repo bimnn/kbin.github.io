@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Playlist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>My Playlist</h1>
+            </div>
+        </header>
+        
+        <section class="track-list">
+            <h2>Playlist</h2>
+            <ul id="track-list">
+                <!-- Existing song list -->
+            </ul>
+            <div class="pagination-controls">
+                <button id="prev-page" disabled>Previous</button>
+                <span id="page-indicator">Page 1</span>
+                <button id="next-page">Next</button>
+            </div>
+            <div class="add-song">
+                <input type="text" id="song-title" placeholder="Enter Song Title" />
+                <input type="text" id="artist-name" placeholder="Enter Artist Name" />
+                <input type="text" id="youtube-url" placeholder="Enter YouTube URL" />
+                <input type="text" id="song-description" placeholder="Enter Song Description" />
+                <button id="add-song-button">Add Song</button>
+            </div>
+        </section>
+
+        <section class="recommended-list">
+            <h2>Recommended Playlist</h2>
+            <ul id="recommended-list">
+                <!-- Recommended songs will be added here dynamically -->
+            </ul>
+        </section>
+    </div>
+    <audio id="audio-player" src="song.mp3"></audio>
+    <script src="scripts.js"></script>
+</body>
+</html>

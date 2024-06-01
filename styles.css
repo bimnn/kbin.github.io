@@ -1,0 +1,246 @@
+/* Existing styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #3a86ff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.header-content h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.track-list, .recommended-list {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.track-list h2, .recommended-list h2 {
+    margin-top: 0;
+    font-size: 2em;
+    border-bottom: 2px solid #3a86ff;
+    padding-bottom: 10px;
+}
+
+.track-list ul, .recommended-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.track-list li, .recommended-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.track-list li:hover, .recommended-list li:hover {
+    background: #f8f8f8;
+    transform: translateY(-2px);
+}
+
+.track-number {
+    font-size: 1.2em;
+    width: 30px;
+    text-align: center;
+}
+
+.track-details {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.track-details img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 20px;
+    transition: transform 0.3s;
+}
+
+.track-details img:hover {
+    transform: scale(1.05);
+}
+
+.track-details strong {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.track-details span {
+    display: block;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.track-details p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.add-song {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.add-song input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.add-song input:focus {
+    border-color: #3a86ff;
+}
+
+.add-song button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #3a86ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.add-song button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination-controls button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #3a86ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.pagination-controls button:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+}
+
+.pagination-controls button:hover:not(:disabled) {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header-content h1 {
+        font-size: 2em;
+    }
+
+    .track-list h2, .recommended-list h2 {
+        font-size: 1.5em;
+    }
+
+    .track-details img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .track-details strong {
+        font-size: 1em;
+    }
+
+    .track-details p {
+        font-size: 0.8em;
+    }
+
+    .add-song input {
+        font-size: 0.9em;
+    }
+
+    .add-song button {
+        font-size: 0.9em;
+    }
+
+    .pagination-controls button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 1.5em;
+    }
+
+    .track-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .track-details img {
+        width: 60px;
+        height: 60px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .track-details strong {
+        font-size: 0.9em;
+    }
+
+    .track-details p {
+        font-size: 0.7em;
+    }
+
+    .add-song input {
+        font-size: 0.8em;
+    }
+
+    .add-song button {
+        font-size: 0.8em;
+    }
+
+    .pagination-controls button {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+}
