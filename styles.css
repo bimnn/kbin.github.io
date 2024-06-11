@@ -244,3 +244,27 @@ header {
         font-size: 0.8em;
     }
 }
+/* styles.css */
+
+.playlist-menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.playlist-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #3a86ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.playlist-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
